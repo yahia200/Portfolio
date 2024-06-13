@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
       },
       gridTempleteColumns: {
         "70/30": "70% 28%",
