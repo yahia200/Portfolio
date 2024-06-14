@@ -10,6 +10,13 @@ export default {
       gridTempleteColumns: {
         "70/30": "70% 28%",
       },
+
+      brightness: {
+        104: '1.04',
+      },
+      spacing: {
+        'semi': '98vh',
+      }
     },
   },
   plugins: [

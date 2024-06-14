@@ -6,7 +6,7 @@ function NavBar() {
     "px-16 transition delay-100 ease-in-out hover:text-ctp-lavender";
 
   return (
-    <div className="bg-ctp-crust">
+    <div className="z-50 bg-ctp-crust rounded-xl mb-32">
       <header className="flex justify-between items-center px-30px py-4">
         <a class="logo" href="/">
           <img
