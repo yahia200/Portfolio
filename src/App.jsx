@@ -1,19 +1,14 @@
 import React from "react";
 import NavBar from "./NavBar";
-import Project_Ascii from "./Project_Ascii";
-import Project_XO from "./project_XO";
-
+import Intro from "./Intro";
+import Connect from "./Connect";
 function App() {
   return (
-    <div className="text-ctp-text font-outfit font-semibold ">
-      <div className="bg-ctp-base  p-5 rounded-xl w-[98%] h-[95%] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-      <NavBar />
-      <dir className="">
-      <Project_Ascii />
-      <Project_Ascii />
-      <Project_Ascii />
-      <Project_Ascii />
-      </dir>
+    <div className="text-ctp-text h-[100vh] border-[2.8vh] border-ctp-crust font-outfit font-semibold text-lg">
+      <div className="bg-ctp-mantle h-[100%] rounded-3xl flex flex-col items-center shadow-md">
+        <NavBar />
+          <Intro />
+          {/* <Connect /> */}
       </div>
     </div>
   );
