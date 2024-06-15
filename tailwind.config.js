@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
         outfit: ["Outfit", "sans-serif"],
+        tls: ["The_Last_Shuriken", "sans-serif"],
       },
       gridTempleteColumns: {
         "70/30": "70% 28%",

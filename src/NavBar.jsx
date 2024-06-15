@@ -3,10 +3,10 @@ import onion from "./images/onion.jpeg";
 
 function NavBar() {
   let li_style =
-    "px-16 transition delay-100 ease-in-out hover:text-ctp-lavender hover:scale-105";
+    "mt-1 px-16 transition delay-100 ease-in-out hover:text-ctp-lavender hover:scale-105";
 
   return (
-    <div className="bg-ctp-mantle rounded-2xl mt-8 h-fit w-[97%]">
+    <div className="bg-ctp-base rounded-2xl mt-8 h-fit w-[97%] font-tls text-sm">
       <div className="flex justify-between items-center px-30px py-4">
         <a href="/">
           <img
@@ -18,7 +18,7 @@ function NavBar() {
         <nav>
           <ul className="flex">
             <li className={li_style}>
-              <a href="#">Introduction</a>
+              <a href="#">Gallary</a>
             </li>
             <li className={li_style}>
               <a href="#">Projects</a>
@@ -29,10 +29,10 @@ function NavBar() {
           </ul>
         </nav>
         <a
-          className=" bg-ctp-green text-black px-8 py-2 rounded-full mr-20 transition delay-100 ease-in-out hover:bg-ctp-mauve hover:scale-105"
+          className=" bg-ctp-green text-ctp-crust px-8 py-2 rounded-full mr-20 transition delay-100 ease-in-out hover:bg-ctp-teal hover:scale-105"
           href="#"
         >
-          Contact
+          <p className="mt-1">Contact</p>
         </a>
       </div>
     </div>

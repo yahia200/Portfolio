@@ -9,6 +9,8 @@ function Intro() {
   let height = "mt-40";
   let width = "w-[50%]";
   let dis = "opacity-1";
+  let nameSpacing = "tracking-normal";
+  let nameSize = "text-7xl"
   if (!showDis) {
     up = "rotate-0";
     dis = "opacity-0";
@@ -16,14 +18,17 @@ function Intro() {
     size = "text-sm"
     width = "w-[20%]";
     height = "mt-0";
+    nameSpacing = "tracking-normal";
+    nameSize = "text-8xl"
   }
 
-  let x = `${width} mx-auto ${height} transition-all delay-50 duration-1000 ease-in-out ${color} ${dis} ${size} `;
-  let butt = `mx-auto size-10 mt-3 transition-all delay-50 duration-300 ease-in-out ${up} hover:size-12 hover:cursor-pointer`;
+  let x = `will-change-transform ${width} mx-auto ${height} transition-all delay-50 duration-1000 ease-in-out ${color} ${dis} ${size} `;
+  let butt = `mx-auto size-10 mt-3 transition-all delay-50 duration-500 ease-in-out ${up} hover:size-12 hover:cursor-pointer`;
+  let name = `font-tls will-change-transform transition-all delay-100 duration-1000 ease-in-out ${nameSize} text-ctp-rosewater ${nameSpacing}`;
   
   return (
     <div className="mt-16 mx-auto text-center">
-      <p className="text-7xl text-ctp-rosewater">YAHIA ELGHONIEMY</p>
+      <p className={name}>YAHIA ELGHONIEMY</p>
       <img src={down} className={butt} onClick={() => setShowDis((prev) => !prev)} />
       <div className={x}>
         When Sarah joined a tech startup as a junior developer, she had a clear
