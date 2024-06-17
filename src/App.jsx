@@ -13,8 +13,9 @@ function App() {
       <div className="bg-ctp-mantle h-[100%] rounded-3xl flex flex-col items-center shadow-inner">
         <NavBar/>
         <Routes>
-          <Route path="/" element={<Intro />}/>
-          <Route path="/gallery" element={<Intro />}/>
+          <Route path="/" element={<Intro state={false}/>}/>
+          <Route path="/about" element={<Intro state={true}/>}/>
+          <Route path="/gallery" element={<Intro state={false}/>}/>
           <Route path="/projects" element={<ProjectPage />}/>
           <Route path="/contact" element={<Connect />}/>
         </Routes>

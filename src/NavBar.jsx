@@ -24,7 +24,7 @@ function NavBar() {
               <Link to="/projects">Projects</Link>
             </li>
             <li className={li_style}>
-              <Link to="/">About</Link>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </nav>
