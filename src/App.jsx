@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   
   return (
-    <div className="text-ctp-text h-[100vh] border-[2.8vh] border-ctp-crust font-outfit font-semibold text-lg">
+    <div className="text-ctp-text h-[100vh] border-[2.8vh] border-ctp-crust font-outfit font-semibold text-lg overflow-hidden">
       <div className="bg-ctp-mantle h-[100%] rounded-3xl flex flex-col items-center shadow-inner">
         <NavBar/>
         <Routes>
