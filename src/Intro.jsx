@@ -62,7 +62,7 @@ function Intro({ state }) {
 
   let x = `will-change-transform ${width} mx-auto ${height} transition-all delay-50 duration-1000 ease-in-out hover:cursor-default ${color} ${dis} ${size}`;
   let butt = `mx-auto ${buttonSize} mt-3 transition-all delay-1000 duration-1000 ease-in-out ${up} hover:cursor-pointer`;
-  let name = ` font-tls will-change-transform transition-all delay-50 duration-1000 ease-in-out ${nameSize} text-ctp-rosewater ${nameSpacing}`;
+  let name = ` font-tls will-change-transform transition-all delay-50 duration-1000 ease-in-out ${nameSize} text-ctp-rosewater  ${nameSpacing}`;
 
   useEffect(() => {
     window.addEventListener("keyup", handelPress, true);
@@ -85,7 +85,7 @@ function Intro({ state }) {
   };
 
   return (
-    <div className="mt-16 mx-auto text-center flex flex-col overflow-hidden">
+    <div className=" mx-auto text-center flex flex-col overflow-hidden">
       <motion.span
         initial="hidden"
         animate="visable"
@@ -118,9 +118,9 @@ function Intro({ state }) {
       </motion.div>
 
       <div className={x}>{discription}</div>
-      <div className="absolute right-2 bottom-0 text-xs font-normal">
+      {/* <div className="absolute right-2 bottom-0 text-xs font-normal">
         {"For better experience please use the arrow keys (vim motions work)"}
-      </div>
+      </div> */}
     </div>
   );
 }

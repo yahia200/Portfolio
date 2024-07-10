@@ -21,13 +21,12 @@ function ProjectPage() {
 
   React.useEffect(() => {
     // Attach the event listener
-    window.addEventListener("keyup", handelPress, true);
-  
+    window.addEventListener("keyup", handlePress, true);
     // Make sure to clean up event lis\
   }, []);
   
 
-  const handelPress = (e) => {
+  const handlePress = (e) => {
     setClicked(e.key)
     if (e.key === "ArrowDown" || e.key === "j"){
         cycleDown();
@@ -36,14 +35,12 @@ function ProjectPage() {
     else if (e.key === "ArrowUp" || e.key === "k"){
       cycleUp();
     }
-
+    
     
   }
 
-  
-
   return (
-    <div className="flex justify-between w-full items-center content-center gap-0">
+    <div className="flex justify-between justify-items-center w-[100%] items-center content-center 2xl:mt-20 3xl:mt-0">
       <ProjectWheel
         active={activeProjectIndex}
         cycleUp={cycleUp}

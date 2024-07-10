@@ -51,7 +51,7 @@ function ProjectWheel({
   let delays = ["delay-0", "delay-75", "delay-100", "delay-200", "delay-0"];
   
   
-  if (click === "l"){
+  if (click === "l" || click === "Enter"){
     if(projects[active].link[0] != "/")
       window.open(projects[active].link, '_blank');
     else
@@ -84,13 +84,19 @@ function ProjectWheel({
             ? delays[1]
             : delays[Math.min(delays.length - 1, Math.abs(index - active))]
         }
+
+        color={
+          active === index
+            ? "bg-ctp-peach"
+            : "bg-ctp-overlay2"
+        }
         
       />
     </motion.div>
   ));
 
   return (
-    <div className="flex flex-col items-center ml-32">
+    <div className="flex flex-col items-center ml-[6vw]">
       <motion.div transition={{ease: "linear", delay: 1.3, duration: .4}} initial="buttonHiddenUp" animate="buttonVisable" variants={defaultAnimation} className={butt} onClick={() => cycleUp()}>
         <IoIosArrowUp size={50} />
       </motion.div>

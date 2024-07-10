@@ -28,12 +28,12 @@ const defaultAnimation = {
 function NavBar() {
   let delay = 0.2;
   let li_style =
-    "px-16 transition delay-100 ease-in-out hover:text-ctp-lavender mt-2";
+    "px-16 transition delay-100 ease-in-out hover:text-ctp-blue mt-2";
 
   return (
     <motion.div
-      className="bg-ctp-base rounded-2xl mt-[2.8vh] h-fit font-tls"
-      style={{width: "calc(100% - 5.6vh)"}}
+      className="bg-ctp-base absolute top-[3vw] rounded-2xl h-fit font-tls"
+      style={{width: "calc(100vw - 6vw)"}}
     >
       <motion.div
         className="flex justify-between items-center px-30px py-4"
