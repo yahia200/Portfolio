@@ -39,14 +39,13 @@ function NavBar() {
         className="flex justify-between items-center px-30px py-4"
       >
         <Link to="/">
-          <motion.img
+          <motion.div
           initial="hiddenLeft" animate="visable"
-          transition={{delay: delay*2.2}}
+          transition={{delay: delay*4}}
             variants={defaultAnimation}
-            src={onion}
-            className="size-12 rounded-full ml-20 transition delay-100 ease-in-out hover:scale-125"
-            alt="logo"
-          />
+            alt="logo">
+            <img className="size-12 rounded-full ml-20 transition ease-in-out hover:scale-125" src={onion}/>
+            </motion.div>
         </Link>
         <motion.nav >
           <motion.ul className="flex">
