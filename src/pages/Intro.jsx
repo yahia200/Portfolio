@@ -41,7 +41,7 @@ function Intro({ state }) {
   let up = "rotate-180";
   let color = "text-ctp-text";
   let size = verticalDisplay ? "text-lg" : "text-3xl";
-  let height = "mt-40";
+  let height = verticalDisplay ? "mt-10" : "mt-40";
   let width = verticalDisplay ? "w-[100%]": "w-[50%]";
   let dis = "opacity-1";
   let nameSpacing = "tracking-normal";
@@ -138,7 +138,7 @@ function Intro({ state }) {
         <Link className="transition duration-200 hover:scale-125" to={"/projects"}>
           <img
             src={down}
-            className={`mx-auto size-10 mt-16 transition-all delay-1000 duration-1000 ease-in-out hover:cursor-pointer`}
+            className={`mx-auto size-10 mt-10 transition-all delay-1000 duration-1000 ease-in-out hover:cursor-pointer`}
             
           />
         </Link>
