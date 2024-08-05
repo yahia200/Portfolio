@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
         outfit: ["Outfit", "sans-serif"],
+        tls: ["The_Last_Shuriken", "sans-serif"],
       },
       gridTempleteColumns: {
         "70/30": "70% 28%",
@@ -17,6 +18,24 @@ export default {
       spacing: {
         'semi': '98vh',
       }
+    },
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+
+
+      '3xl': '2000px',
     },
   },
   plugins: [
