@@ -67,6 +67,7 @@ function ProjectWheel({
     >
       <ProjectCard
         onClick={() => console.log("ss")}
+        icons={project.icons}
         name={project.name}
         opacity={
           active === -1
@@ -88,7 +89,7 @@ function ProjectWheel({
         color={
           active === index
             ? "bg-ctp-peach"
-            : "bg-ctp-overlay2"
+            : "bg-ctp-peach"
         }
         
       />

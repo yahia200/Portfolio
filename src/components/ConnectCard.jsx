@@ -1,5 +1,5 @@
 import React from "react";
-import go from "./images/down.png";
+import go from "../images/down.png";
 function ConnectCard() {
   return (
     <div className="bg-ctp-base w-[30vw] rounded-xl py-5 flex m-32">
