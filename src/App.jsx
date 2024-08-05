@@ -13,6 +13,7 @@ const [firstVisit, setFirstVisit] = useState(true)
 const [color, setColor] = useState(0)
 const location = useLocation();
 let MINUTE_MS = 3000;
+let verticalDisplay = screen.width/screen.height < 1
 let s = [`transition-all duration-[3000ms] bg-ctp-mantle h-[100%] rounded-3xl flex justify-center flex-col items-center shadow-inner bg-[radial-gradient(#f5e0dc15_5px,#181825_1px)] bg-[size:50px_50px] bg-[center_top_0px]`,
 `transition-all duration-[3000ms] ease-linear bg-ctp-mantle h-[100%] rounded-3xl flex justify-center flex-col items-center shadow-inner bg-[radial-gradient(#f2cdcd15_5px,#181825_1px)] bg-[size:49px_49px] bg-[center_top_42px]`,
 `transition-all duration-[3000ms] ease-linear bg-ctp-mantle h-[100%] rounded-3xl flex justify-center flex-col items-center shadow-inner bg-[radial-gradient(#f5c2e715_5px,#181825_1px)] bg-[size:48px_48px] bg-[center_top_84px]`,
@@ -30,13 +31,12 @@ React.useEffect(() => {
 
   const interval = setInterval(() => {
     setColor((prev) => ((prev+1) % (s.length - 1)));
-    console.log(color)
   }, MINUTE_MS);
 
   return () => clearInterval(interval);
   }, []);
-
- let d =  <div className="text-ctp-text h-[100vh] border-[1.5vw] border-ctp-crust font-outfit font-semibold text-lg overflow-hidden">
+  let boarder = verticalDisplay ? "border-[0vw]" : "border-[1.5vw]";
+ let d =  <div className={`text-ctp-text h-[100vh] ${boarder} border-ctp-crust font-outfit font-semibold text-lg overflow-hidden`}>
       
  <div className={s[color]}>
    <NavBar/>

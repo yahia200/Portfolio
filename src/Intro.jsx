@@ -35,16 +35,17 @@ function Intro({ state }) {
   if (state !== showDis) {
     setShowDis(state);
   }
+  let verticalDisplay = screen.width/screen.height < 1
   let discription =
     "When Sarah joined a tech startup as a junior developer, she had a clear goal: to reach the C-suite within 10 years. She dedicated herself to learning new technologies, taking on challenging projects, and building strong relationships with her colleagues. Her hard work and dedication paid off. After 5 years, Sarah was promoted to team lead, and 3 years later, she became the head of engineering. In her 10th year with the company, she was appointed Chief Technology Officer. Sarah's story is a reminder that ambition, perseverance, and a willingness to go the extra mile can propel you to the top.";
   let up = "rotate-180";
   let color = "text-ctp-text";
-  let size = "text-3xl";
+  let size = verticalDisplay ? "text-lg" : "text-3xl";
   let height = "mt-40";
-  let width = "w-[50%]";
+  let width = verticalDisplay ? "w-[100%]": "w-[50%]";
   let dis = "opacity-1";
   let nameSpacing = "tracking-normal";
-  let nameSize = "text-7xl";
+  let nameSize = verticalDisplay ? "text-2xl" : "text-7xl";
   let nameMargine = "mt-0";
   let buttonSize = "size-10";
   let butonHoversize = "size-24";
@@ -54,9 +55,9 @@ function Intro({ state }) {
     color = "text-ctp-peach";
     height = "mt-80";
     nameSpacing = "tracking-normal";
-    nameSize = "text-9xl";
+    nameSize = verticalDisplay ? "text-3xl" : "text-9xl";
     nameMargine = "mt-52";
-    buttonSize = "size-24";
+    buttonSize = verticalDisplay ? "size-12" : "size-24";
     butonHoversize = "size-28";
   }
 
