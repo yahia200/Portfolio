@@ -62,7 +62,7 @@ function ProjectPage() {
         projects={projects}
         clicked={clicked}
       />
-      <ProjectPreview discription={activeProjectIndex === -1 || verticalDisplay ? "" : projects[activeProjectIndex].discription} />
+      {verticalDisplay ? <></> : <ProjectPreview discription={activeProjectIndex === -1 || verticalDisplay ? "" : projects[activeProjectIndex].discription} />}
     </div>
   );
 }

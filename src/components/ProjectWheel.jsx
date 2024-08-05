@@ -42,6 +42,7 @@ function ProjectWheel({
   clicked = false,
 }) {
   let navigate = useNavigate()
+  let verticalDisplay = screen.width/screen.height < 1
   let click = clicked;
   let butt =
     "my-5 will-change-transform transition delay-50 ease-in-out hover:cursor-pointer hover:scale-125";
@@ -97,7 +98,7 @@ function ProjectWheel({
   ));
 
   return (
-    <div className="flex flex-col items-center ml-[6vw]">
+    <div className={`flex flex-col items-center ${verticalDisplay ? "mx-auto" : "ml-[6vw]"}`}>
       <motion.div transition={{ease: "linear", delay: 1.3, duration: .4}} initial="buttonHiddenUp" animate="buttonVisable" variants={defaultAnimation} className={butt} onClick={() => cycleUp()}>
         <IoIosArrowUp size={50} />
       </motion.div>
