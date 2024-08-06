@@ -4,7 +4,6 @@ import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
 const defaultAnimation = {
   hidden: {
     opacity: 0,
@@ -80,7 +79,7 @@ function ProjectWheel({
             ? scales[1]
             : scales[Math.min(scales.length - 1, Math.abs(index - active))]
         }
-        borderColor={index === active ? "border-ctp-peach" : "border-ctp-mauve"}
+        borderColor={index === active ? "border-ctp-red" : "border-ctp-peach"}
         delay={
           active === -1
             ? delays[1]
@@ -99,18 +98,15 @@ function ProjectWheel({
 
   return (
     <div className={`flex flex-col items-center ${verticalDisplay ? "mx-auto" : "ml-[6vw]"}`}>
-      <motion.div transition={{ease: "linear", delay: 1.3, duration: .4}} initial="buttonHiddenUp" animate="buttonVisable" variants={defaultAnimation} className={butt} onClick={() => cycleUp()}>
-        <IoIosArrowUp size={50} />
-      </motion.div>
       <motion.div
         initial="hidden"
         animate="visable"
       >
         {listProjects}
       </motion.div>
-      <motion.div transition={{ease: "linear", delay: 1.3+0.15, duration: .4}} initial="buttonHiddenDown" animate="buttonVisable" variants={defaultAnimation} className={butt} onClick={() => cycleDown()}>
-        <IoIosArrowDown size={50} />
-      </motion.div>
+      {verticalDisplay && <motion.div className=" bg-ctp-green text-black px-8 mt-10 py-2 rounded-full transition delay-100 ease-in-out hover:bg-ctp-mauve hover:scale-105">
+    <motion.p className="select-none">Description</motion.p>
+    </motion.div>}
     </div>
   );
 }

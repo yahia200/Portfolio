@@ -37,7 +37,7 @@ function Intro({ state }) {
   }
   let verticalDisplay = screen.width/screen.height < 1
   let discription =
-    "When Sarah joined a tech startup as a junior developer, she had a clear goal: to reach the C-suite within 10 years. She dedicated herself to learning new technologies, taking on challenging projects, and building strong relationships with her colleagues. Her hard work and dedication paid off. After 5 years, Sarah was promoted to team lead, and 3 years later, she became the head of engineering. In her 10th year with the company, she was appointed Chief Technology Officer. Sarah's story is a reminder that ambition, perseverance, and a willingness to go the extra mile can propel you to the top.";
+    "As a computer engineering student at the German University in Cairo, I am proficient in C, Python, Java, and React. I have worked on diverse projects showcasing my versatility. My quick learning ability helps me adapt and excel in new environments. In addition to my technical skills, I enjoy 3D modeling reflecting my passion for creative problem-solving."
   let up = "rotate-180";
   let color = "text-ctp-text";
   let size = verticalDisplay ? "text-lg" : "text-3xl";

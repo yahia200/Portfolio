@@ -80,7 +80,7 @@ function NavBar() {
     to="/contact"
   >
     <motion.div initial="hiddenRight" animate="visable" variants={defaultAnimation} transition={{delay: delay*2}} className=" bg-ctp-green text-black px-8 py-2 rounded-full mr-20 transition delay-100 ease-in-out hover:bg-ctp-mauve hover:scale-105">
-    <motion.p initial="hiddenTxt" animate="visable" variants={defaultAnimation} transition={{delay: 1}} className="">Contact</motion.p>
+    <motion.p initial="hiddenTxt" animate="visable" variants={defaultAnimation} transition={{delay: 1}} className="select-none">Contact</motion.p>
     </motion.div>
   </Link>
   </>
@@ -102,15 +102,15 @@ function NavBar() {
           <img className={`size-12 rounded-full ${imgml} ${menuOpen ? "opacity-0" : "transition ease-in-out opacity-1"} hover:scale-125`} src={onion}/>
           </motion.div>
       </Link>
-      {verticalDisplay ? <motion.div
+      {verticalDisplay && <motion.div
         initial="hiddenLeft" animate="visable"
         transition={{delay: delay*4}}
           variants={defaultAnimation}
           className="absolute right-0 z-[999]"
           alt="logo">
           <img onClick={() => setMenuOpen((prev) => !prev)} className={`size-10 rounded-full mr-5 z-[999] transition ease-in-out`} src={menuOpen ? clos : menu}/>
-          </motion.div> : <></>}
-      { menuOpen || !verticalDisplay ? liItems : <></>}
+          </motion.div>}
+      { (menuOpen || !verticalDisplay) && liItems}
     </motion.div>
       </motion.div>
   );
