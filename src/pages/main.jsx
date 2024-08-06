@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "../style/index.css";
 import { HashRouter } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <HashRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter basename="/">
       <App />
     </HashRouter>
 );
