@@ -1,5 +1,5 @@
 import React from "react";
-import onion from "../images/onion.jpeg";
+import onion from "../images/onion.png";
 import menu from "../images/menu.svg";
 import clos from "../images/close.svg";
 import { Link } from "react-router-dom";
@@ -99,7 +99,7 @@ function NavBar() {
         transition={{delay: delay*4}}
           variants={defaultAnimation}
           alt="logo">
-          <img className={`size-12 rounded-full ${imgml} ${menuOpen ? "opacity-0" : "transition ease-in-out opacity-1"} hover:scale-125`} src={onion}/>
+          <img className={`w-[32px] ${imgml} ${menuOpen ? "opacity-0" : "transition ease-in-out opacity-1"} hover:scale-125`} src={onion}/>
           </motion.div>
       </Link>
       {verticalDisplay && <motion.div
