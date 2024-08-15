@@ -106,9 +106,9 @@ function NavBar() {
         initial="hiddenLeft" animate="visable"
         transition={{delay: delay*4}}
           variants={defaultAnimation}
-          className="absolute right-0 z-[999]"
+          className="absolute right-0 z-[115]"
           alt="logo">
-          <img onClick={() => setMenuOpen((prev) => !prev)} className={`size-10 rounded-full mr-5 z-[999] transition ease-in-out`} src={menuOpen ? clos : menu}/>
+          <img onClick={() => setMenuOpen((prev) => !prev)} className={`size-10 rounded-full mr-5 z-[115] transition ease-in-out`} src={menuOpen ? clos : menu}/>
           </motion.div>}
       { (menuOpen || !verticalDisplay) && liItems}
     </motion.div>
