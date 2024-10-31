@@ -49,8 +49,56 @@ function ProjectPage() {
           <br/>Debugging and Optimization: Working with low-level graphics and threading introduced challenges in debugging and optimizing the code for performance and correctness.</p>},
     
     { name: "Gallery",icons: [<SiBlender className="size-8 my-auto text-ctp-crust" key={0}/>], link:"/gallery", discription:  ""},
-    { name: "SQL Engine",icons: [<RiJavaLine className="size-8 my-auto text-ctp-crust" key={0}/>], link:"https://github.com/yahia200", discription:  " Please LIKE & SHARE to keep our generators available! Click Like The coin hovered in the air, spinning over and over again. It reached its peak and began to descend. Both boys were pleading with it to land a certain way but the coin had already made up its mind on what it was going to do."},
-    { name: "Tic-Tac-Toe AI",icons: [<FaPython className="size-8 my-auto text-ctp-crust" key={0}/>] ,link:"https://github.com/yahia200", discription:  "Greg understood that this situation would make Michael terribly uncomfortable. Michael simply had no idea what was about to come and even though Greg could prevent it from happening, he opted to let it happen. It was quite ironic, really. It was something Greg had said he would never wish upon anyone a million times, yet here he was knowingly letting it happen to one of his best friends. He rationalized that it would ultimately make Michael a better person and that no matter how uncomfortable, everyone should experience racism at least once in their lifetime." },
+    { name: "SQL Engine",icons: [<RiJavaLine className="size-8 my-auto text-ctp-crust" key={0}/>], link:"https://github.com/yahia200", discription:
+    <p>
+      This project is a database management application implemented in Java. It includes various components to handle database operations such as creating tables, inserting data, and managing indexes using B+ trees.
+      <br/><br/>
+      Lessons Learned:<br/>
+      <br/>
+      Modular Design: The project is designed with a modular approach, where each class has a specific responsibility. This makes the code easier to maintain and extend.
+      <br/>
+      <br/>
+      Exception Handling: Proper exception handling is crucial for robust applications. The project demonstrates the use of custom exceptions like DBAppException to handle specific error scenarios.
+      <br/>
+      <br/>
+      Data Structures: Implementing and using data structures like B+ trees for indexing can significantly improve the performance of database operations.
+      <br/>
+      <br/>
+      File I/O: Handling file input and output operations, such as reading from and writing to CSV files, is essential for persisting data.
+      <br/>
+      <br/>
+      Code Documentation: Adding comments and documentation helps in understanding the code better and makes it easier for others to contribute to the project.
+      <br/>
+      <br/>
+      Testing: Including test classes like BTreeTest helps in verifying the correctness of the implementation and ensures that the code works as expected.
+      <br/>
+      <br/>
+      Error Handling in Data Conversion: The project includes methods to handle special characters and null values in CSV data, which is important for data integrity.
+      <br/>
+      <br/>
+      Iterators and Collections: Using Java collections and iterators effectively to manage and manipulate data within the application.
+    </p>
+  },
+    { name: "Tic-Tac-Toe AI",icons: [<FaPython className="size-8 my-auto text-ctp-crust" key={0}/>] ,link:"https://github.com/yahia200", discription:
+  <p>This project is a simple implementation of a Tic-Tac-Toe game with an AI opponent. The game is played on a 3x3 grid, where two players take turns marking the spaces in the grid with "X" and "O". The AI uses a set of
+     strategies to determine its moves, aiming to either win the game or block the opponent from winning.
+     <br/><br/>
+     Lessons Learned:<br/>
+     <br/>
+     Numpy for Game Logic: Utilizing numpy arrays simplifies the manipulation and summation of rows, columns, and diagonals, making it easier to implement game logic.
+     <br/>
+     <br/>
+     Function Decomposition: Breaking down the game logic into smaller functions improves code readability and maintainability.
+     <br/>
+     <br/>
+     User Interaction: Handling user input and updating the game state in a loop ensures a smooth gameplay experience.
+     <br/>
+     <br/>
+     AI Strategy: Implementing basic AI strategies (early game, mid-game, and end-game) provides a challenging opponent for the player.
+     <br/>
+     <br/>
+     Code Readability: Using clear variable names and comments helps in understanding the flow of the game and the purpose of each code block.
+     </p>},
 
     
 
