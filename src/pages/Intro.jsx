@@ -1,7 +1,6 @@
 import React from "react";
 import down from "../images/down.png";
 import { useState, useEffect } from "react";
-import ReactDom from 'react-dom';
 import { motion } from "framer-motion";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 

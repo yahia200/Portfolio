@@ -1,12 +1,23 @@
 import React from "react";
-import go from "../images/down.png";
-function ConnectCard() {
+function ConnectCard({name , l, type}) {
+
+  const card = type === "mail" ? <a href={"https://" + l} target="_blank" className="mx-auto flex">
+  <div>
+  <p className="text-4xl text-center text-ctp-red">{name}</p>
+  <p className="text-3xl text-center text-ctp-text">{l}</p>
+  </div>
+</a>
+:
+<a target="_blank" className="mx-auto flex">
+  <div>
+  <p className="text-4xl text-center text-ctp-red">{name}</p>
+  <p className="text-3xl text-center text-ctp-text">{l}</p>
+  </div>
+</a>
+
   return (
     <div className="bg-ctp-base w-[30vw] rounded-xl py-5 flex m-32">
-      <a href="https://github.com/yahia200" target="_blank" className="mx-auto flex">
-        <p className="text-4xl text-center text-ctp-red">Git-Hub</p>
-        <img src={go} className="my-auto size-5 ml-1 -rotate-90" />
-      </a>
+      {card}
     </div>
   );
 }
