@@ -68,7 +68,7 @@ function ProjectWheel({
       <ProjectCard
         onClick={() => console.log("ss")}
         icons={project.icons}
-        name={project.name}
+        name={index === active ? "Click again to visit" : project.name}
         opacity={
           active === -1
             ? opacities[1]
