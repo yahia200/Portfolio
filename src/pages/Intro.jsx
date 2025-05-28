@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import down from "../images/down.png";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation, Link } from "react-router-dom";
+import { useScrollCounter } from "../components/useScrollCount";
 
 const defaultAnimation = {
   hidden: {
@@ -83,6 +83,24 @@ function Intro({ state }) {
       s=false;
     }
   };
+
+   useScrollCounter(3,(dir) => {
+    if (dir === "down") {
+      if(!s){
+        navigate("/about")
+        s=true
+    }
+      else{
+        navigate("/projects");
+        window.removeEventListener("keyup", handelPress, true);
+      }
+    } else if (dir === "up") {
+      navigate("/")
+      s=false;
+    }
+  });
+
+
   return (
     <div className=" mx-auto text-center flex flex-col overflow-hidden">
       <motion.span

@@ -7,6 +7,7 @@ import { FaPython } from "react-icons/fa6";
 import { RiNextjsFill, RiJavaLine  } from "react-icons/ri";
 import { SiBlender } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
+import { useScrollCounter } from "../components/useScrollCount";
 function ProjectPage() {
   let verticalDisplay = screen.width/screen.height < 1
   let navigate = useNavigate()
@@ -69,6 +70,17 @@ function ProjectPage() {
     
     
   }
+
+
+    useScrollCounter(1,(dir) => {
+      if (dir === "down") {
+        cycleDown();
+    }
+
+    else if (dir === "up") {
+      cycleUp();
+    }
+    });
 
   return (
     <div className="flex justify-between justify-items-center w-[100%] items-center content-center 2xl:mt-20 3xl:mt-0">

@@ -7,6 +7,7 @@ import boyghost from "../images/boyghost.jpg"
 import eggpalt from "../images/eggpalt.jpg"
 import onion from "../images/onion.jpg"
 import { useState } from 'react'
+import { useScrollCounter } from "../components/useScrollCount";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 function Gallery() {
   const [active, setActive] = useState(0);
@@ -32,6 +33,15 @@ function Gallery() {
     }
   }
 
+    useScrollCounter(1,(dir) => {
+    if (dir === "down") {
+        cycleRight();
+    }
+
+    else if (dir === "up") {
+      cycleLeft();
+    }
+  });
   return (
     <div className={`${!verticalDisplay && "flex flex-between"}`}>
       <IoIosArrowUp onClick={()=>setActive((active - 1 + imgs.length) % imgs.length)} className={`${!verticalDisplay && "-rotate-90"} my-auto mx-auto`} size={50} />
