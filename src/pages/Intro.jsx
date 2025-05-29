@@ -35,12 +35,11 @@ function Intro({ state }) {
     setShowDis(state);
   }
   let verticalDisplay = screen.width/screen.height < 1
-  let discription =
-    "As a computer engineering student at the German University in Cairo, I am proficient in C, Python, Java, and React. I have worked on diverse projects showcasing my versatility. My quick learning ability helps me adapt and excel in new environments. In addition to my technical skills, I enjoy 3D modeling reflecting my passion for creative problem-solving."
+  let discription = "I am a computer engineering student at the German University in Cairo. I am experienced with NextJS, React, and Node. I am also proficient in C, Python, and Java. I have worked on diverse projects showcasing my versatility."
   let up = "rotate-180";
   let color = "text-ctp-text";
   let size = verticalDisplay ? "text-lg" : "text-3xl";
-  let height = verticalDisplay ? "mt-10" : "mt-40";
+  let height = verticalDisplay ? "mt-10" : "mt-10";
   let width = verticalDisplay ? "w-[100%]": "w-[50%]";
   let dis = "opacity-1";
   let nameSpacing = "tracking-normal";
